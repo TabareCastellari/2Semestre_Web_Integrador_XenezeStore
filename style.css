@@ -1,0 +1,269 @@
+html,
+body {
+    min-height: 100vh; /* vh = viewport height;100vh = 100% da altura visível da tela */
+    margin: 0;
+}
+
+body {
+    display: flex; /* faz do body e seus filhos elementos flexíveis */
+    flex-direction: column; /* faz com que seja organizado na horizontal e não na vertical */
+
+    margin: 0;
+    background-color: #F5F7FA;
+    color: #001F5B;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+}
+
+/* CABEÇALHO */
+.topo {
+    background-color: #001F5B;
+    color: #F5F7FA;
+    padding: 20px 24px;
+}
+
+.topo_nome {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.topo_apoio {
+    margin: 4px 0 0;
+    color: #F5F7FA;
+    font-size: 0.85rem;
+}
+
+.menu {
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+    padding-left: 0;
+}
+
+.menu a {
+    color:white;
+    text-decoration:none;
+}
+
+.menu {
+    flex-direction:row;
+}
+
+/* SEÇÃO DE CONTEÚDO */
+.secao {
+    padding: 30px 24px;
+}
+
+/* GRADE PRODUTOS */
+.produtos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* O CARTÃO DO PRODUTO */
+.produto {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+/* O espaço da foto. Uma div vazia não tem altura, então precisamos dar uma para ela aparecer*/
+.produto_figura {
+    height: auto;
+}
+
+/* Uma cor diferente para cada produto */
+.produto_figura--a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.produto_figura--b img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.produto_figura--c img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.produto_corpo {
+    padding: 15px;
+}
+
+.produto_nome {
+  margin: 0;  
+  font-size: 1.05rem;
+}
+
+.produto_texto {
+    margin: 8px 0;
+    color: #5c7883;
+    font-size: 0.9rem;
+}
+
+.produto_preco {
+    margin: 0 0 14px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* O botão não herda a fonte do body sozinho.
+font: inherit conserta isso */
+
+.botao {
+    font: inherit;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFC72C;
+    color: #001F5B;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* :hover = quando o mouse está em cima. */
+.botao:hover {
+    background-color: #FFD100;
+}
+
+.botao_esvaziar {
+    font: inherit;
+    padding: 10px;
+    background-color: #FFC72C;
+    color: #001F5B;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao_esvaziar:hover {
+    background-color: #FFD100;
+}
+
+/* UPDATE: Fase 2 do projeto */
+.tabela-rolagem {
+    overflow-x: auto;
+}
+
+/* border-collapse: collapse gruda as células umas nas outras. Sem ele, o navegador deixa um vão entre cada célula e a linha divisória aparece picotada */
+.tabela {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    background-color: var(--papel);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* O <caption> nasce centralizado. Alinhamos à esquerda para ele combinar com o resto da página */
+.tabela caption {
+    padding-bottom: 10px;
+    color: var(--texto-fraco);
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+/* Uma regra para od dois tipos de célula de uma vez.  A vírgula no seletor quer dizer "e também". <th> nasce centralizado, por isso o text-align. */
+.tabela th, .tabela td {
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid #001F5B;
+}
+
+/* Seletor com espaço = "th que está dentro de thead". Assim o cabeçalho pinta, mas o nome do café na lateral não */
+.tabela thead th {
+    background-color: var(--destaque);
+    color: var(--papel);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-bottom: none;
+    background-color: #ffdc7d;
+}
+
+/* :nth-child(even) pega as linhas de posição par; Em tabela larga, a faixa alternada evita ler dado de uma linha achando que é de outra. Troque "even" por "odd" para inverter */
+.tabela tbody tr:nth-child(even) {
+    background-color: #ffdc7d;
+}
+
+.tabela tbody tr:nth-child(odd) {
+    background-color: #f8df9a;
+}
+
+.tabela tfoot td {
+    color: var(--texto-fraco);
+    font-size: 0.85rem;
+    border-bottom: none;
+}
+
+/* CONTADOR DO CARRINHO */
+.topo__carrinho {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+}
+ 
+/* Seletor com # busca um id, assim como o ponto busca uma classe. */
+#contador {
+  display: inline-block;
+  min-width: 24px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background-color: var(--destaque);
+  color: var(--papel);
+  font-weight: bold;
+  text-align: center;
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 700px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CBD9DD;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* RODAPÉ */
+.rodape {
+    margin-top: auto; /* absorve todo o espaço livre acima disponível */
+    background-color: #001F5B;
+    color: #F5F7FA;
+    padding: 20px 24px;
+    font-size: 0.85rem;
+}
+
+.rodape p {
+    margin: 0
+}

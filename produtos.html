@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Xeneize Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho do site -->
+    <header class="topo">
+        <h1 class="topo_nome">Xeneize Store</h1>
+        <p class="topo_apoio">La mitad más uno, agora também na internet.</p>
+
+        <!-- menu navegável -->
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        <!-- Carrinho -->
+        <p class="topo_carrinho">Carrinho: <span id="contador">0</span> items</p>
+        <button type="button" class="botao_esvaziar" id="esvaziar">Esvaziar carrinho</button>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="secao">
+            <h2>Nossos produtos</h2>
+            <ul class="produtos">
+                <!-- Primeiro produto -->
+                <li class="produto">
+                    <!-- Espaço da foto. Por enquanto é só um bloco colorido -->
+                    <div class="produto_figura produto_figura--a">
+                        <img src="img/camisa1.png" alt="Camisa padrão do Boca Juniors, com as cores Azul e Amarelo">
+                    </div>
+                    <div class="produto_corpo">
+                        <h3 class="produto_nome">Camisa 1 2026/27</h3>
+                        <p class="produto_texto">A clássica camisa azul e amarela do xeneize</p>
+                        <p class="produto_preco">R$ 399,90</p>
+                        <button type="button" class="botao" id="botao1">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+                
+                <!-- Segundo produto -->
+                <li class="produto">
+                    <!-- Espaço da foto. Por enquanto é só um bloco colorido -->
+                    <div class="produto_figura produto_figura--b">
+                        <img src="img/camisa2.png" alt="Camisa alternativa do Boca Juniors, com as cores Amarelo e Azul">
+                    </div>
+                    <div class="produto_corpo">
+                        <h3 class="produto_nome">Camisa 2 2026/27</h3>
+                        <p class="produto_texto">Camisa alternativa/visitante com o amarelo como cor principal, invertendo as clássicas cores</p>
+                        <p class="produto_preco">R$ 399,90</p>
+                        <button type="button" class="botao" id="botao2">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+
+                <!-- Terceiro produto -->
+                <li class="produto">
+                    <!-- Espaço da foto. Por enquanto é só um bloco colorido -->
+                    <div class="produto_figura produto_figura--c">
+                        <img src="img/camisa3.png" alt="Camisa alternativa do Boca Juniors, listrada com as cores branco e preto">
+                    </div>
+                    <div class="produto_corpo">
+                        <h3 class="produto_nome">Camisa 3 2026/27</h3>
+                        <p class="produto_texto">Camisa edição especial inspirada na primeira de 1908</p>
+                        <p class="produto_preco">R$ 399,90</p>
+                        <button type="button" class="botao" id="botao3">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+            </ul>
+
+            <h2></h2>
+        </section>
+
+        <!-- UPDATE: Fase 2 do projeto -->
+         <section class="secao">
+            <h2>Guia de tamanhos</h2>
+            <!-- Esta div envolve a tabela para ela poder rolar de lado no celular, em vez de arrebentar a página -->
+            <div class="tabela-rolagem">
+                <table class="tabela">
+                    <!-- <caption> é o título da tabela. Diferente de um <h3> solto por perto, ele fica preso a ela -->
+                    <caption>Medidas em centímetros</caption>
+                    <!-- scope="col" diz que este <th> rotula uma COLUNA -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Tamanho</th>
+                            <th scope="col">Tórax</th>
+                            <th scope="col">Comp.</th>
+                            <th scope="col">Ombro</th>
+                            <th scope="col">Manga</th>
+                        </tr>
+                    </thead>
+                    <!-- O nome do café é <th scope="row"> porque ele rotula a LINHA inteira: não é dadp, é etiqueta -->
+                    <tbody>
+                        <tr>
+                            <th scope="row">PP</th>
+                            <td>82</td>
+                            <td>64</td>
+                            <td>9</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">P</th>
+                            <td>94</td>
+                            <td>68</td>
+                            <td>12</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">M</th>
+                            <td>98</td>
+                            <td>70</td>
+                            <td>15</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">G</th>
+                            <td>104</td>
+                            <td>72</td>
+                            <td>18</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">GG</th>
+                            <td>110</td>
+                            <td>74</td>
+                            <td>21</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">EXG</th>
+                            <td>114</td>
+                            <td>76</td>
+                            <td>22</td>
+                            <td>25</td>
+                        </tr>
+                    </tbody>
+
+                    <!-- colspan="6" faz esta célula ocupar  colunas -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">*As medidas podem sofres algumas pequenas alterações de centimetros</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+         </section>
+    </main>
+
+    <!-- Rodape -->
+    <footer class="rodape">
+        <p>Xeneize Store &middot; Projeto integrador</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
